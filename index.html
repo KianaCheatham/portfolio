@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM Design Portfolio</title> <!--this doesnt appear in site, just for us-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- this is for the project pop up window -->
+    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:100; justify-content:center; align-items:center;">
+        <div id="modal-content" style="background:#F6F7F4; padding:8%; max-width:1000px; width:90%; border-radius:3rem; overflow-y:auto; max-height:90vh;">
+            <div class="modal-close-wrapper">
+                <button class="modal-close" onclick="closeModal()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- animated stripe background -->
+    <!-- <svg id="stripe-bg" width="100%" height="100%" style="
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+    ">
+    <line x1="10%" y1="0" x2="10%" y2="100%" stroke="#8BAE8D" stroke-width="4"/>
+    <line x1="30%" y1="0" x2="30%" y2="100%" stroke="#C9D8B6" stroke-width="4"/>
+    <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#6D8A96" stroke-width="4"/>
+    <line x1="70%" y1="0" x2="70%" y2="100%" stroke="#4F6B5A" stroke-width="4"/>
+    <line x1="90%" y1="0" x2="90%" y2="100%" stroke="#D7E3E5" stroke-width="4"/>
+    </svg> -->
+
+    <!-- ---------------------------------------------------------------------
+    Header+Main : change to artwork later
+    ---------------------------------------------------------------------  -->
+    <div id="header"></div>
+    <script>
+        fetch("components/navBar.html")  // <-- adjust this based on folder: fetch("../navBar.html")  
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("header").innerHTML = html;
+      
+            const sidebar = document.querySelector('.sidebar');
+            const openBtn = document.querySelector('.menu-button');
+            const closeBtn = document.querySelector('.close-btn');
+      
+            openBtn?.addEventListener("click", () => sidebar.style.display = "flex");
+            closeBtn?.addEventListener("click", () => sidebar.style.display = "none");
+        });
+    </script>
+      
+
+    <!-- sidebar for phone -->
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+    <!-- bg art part THESE WORDS ARE WHAT GOES OVER: "Exploring motion, interaction, and visual systems through design.
+Scroll to see my work." -->
+    <section class="bg-art"> 
+        <a href="#about" class="scroll-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#4F6B5A">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- <p class="color1"> words</p>
+    <p class="color2"> words</p>
+    <p class="color3"> words</p>
+    <p class="color4"> words</p>
+    <p class="color5"> words</p>
+    <p class="color6"> words</p>
+    <p class="color7"> words</p>
+    <p class="color8"> words</p>
+    <p class="color9"> words</p>
+    <p class="color10"> words</p>
+    <p class="color11"> words</p> -->
+
+    <!-- ---------------------------------------------------------------------
+     About / Second Section : honestly prob delete the about me part but about is important
+     --------------------------------------------------------------------- -->
+     <div id="about">
+        <!--div class="container"-->
+            <!-- <h3 class="about-welcome">Hi, I'm Kiana!</h3> -->
+            <div class="about-info"> 
+                <span class="about-info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#738074"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 220 200-108v-151L480-372 280-491v151l200 108Zm0-220Zm0 69Zm0 0Z"/></svg>
+                    Design | Media Art, Linguistics & Computer Science / UCLA
+                </span>
+                <span class="about-divider">·</span>
+                <span class="about-info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#738074"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-560q0-117-73.5-198.5T480-840q-93 0-166.5 81.5T240-560q0 71 59 162.5T480-186Z"/></svg>
+                    SD / LA
+                </span>
+            </div>
+            <p class="aboutPG">Hi, I'm Kiana! I create immersive experiences that blend visual storytelling with 
+                technology. My work explores the intersection of science, design, 
+                and human interaction, with a focus on building engaging and 
+                meaningful digital environments.</p>
+     </div>
+
+     <!-- ---------------------------------------------------------------------
+     Project / Third Section 
+     --------------------------------------------------------------------- -->
+     <section class="projects" id="projects">
+        <h3 class="heading">Projects</h3>
+        <div class="projects-box"> 
+
+            <!--PROJECT 1-->
+            <div class="project-card">
+                <img src="images/covers/pocketUniverse.webp" alt="">
+                <h3>AR Planet Project</h3>
+                <p>Immersive AR exploration of the solar system</p>
+                <ul class="software"> <li>Xcode</li>  <li>Swift</li> <li>Blender</li>  <li>Figma</li> <li>Reality Converter</li>  <li>Procreate</li></ul>
+                <div class="btn" onclick="openModal('projectPages/planetProject.html')">View Project</div>
+            </div>
+
+            <!--PROJECT 2-->
+            <div class="project-card">
+                <img src="images/covers/peak.jpg" alt="">
+                <h3>P.E.A.K.</h3>
+                <p>ios app for 2025 Congressional App Challange</p>
+                <ul class="software"> <li>Xcode</li>  <li>Figma</li>  <li>Swift</li></ul>
+                <div class="btn" onclick="openModal('projectPages/PEAK.html')">View Project</div>
+            </div>
+
+            <!--PROJECT 3-->
+            <div class="project-card">
+                <img src="images/covers/seagulls.jpg" alt="">
+                <h3>Flock</h3>
+                <p> Interactive bird simulation through mouse tracking and hand-drawn illustration</p>
+                <ul class="software"> <li>Processing</li>  <li>Procreate</li></ul>
+                <div class="btn" onclick="openModal('projectPages/seagulls.html')">View Project</div>
+            </div>
+
+            <!--PROJECT 4-->
+            <div class="project-card">
+                <img src="images/covers/mountian.png" alt="">
+                <h3>Mountian Lighting</h3>
+                <p>Sky simulation mapping user input to atmospheric lighting states</p>
+                <ul class="software"> <li>P5js</li>  <li>Procreeate</li></ul>
+                <div class="btn" onclick="openModal('projectPages/mountian.html')">View Project</div>
+            </div>
+
+            <!--PROJECT 5-->
+            <div class="project-card">
+                <img src="images/covers/diner.jpg" alt="">
+                <h3>Diner</h3>
+                <p>Node shading study exploring texture, light, and atmospheric depth in Blender</p>
+                <ul class="software"> <li>Blender</li></ul>
+                <div class="btn" onclick="openModal('projectPages/diner.html')">View Project</div>
+            </div>
+
+            <!--PROJECT 6-->
+            <div class="project-card">
+                <!-- <img src="images/tortoise.png" alt=""> -->
+                <h3>More Work!</h3>
+                <p>Additional work including technical models, illustration, commissioned projects, ect.</p>
+                <!-- <ul class="software"> <li> </li></ul> -->
+                 <br> <br>
+                <a class="btn" href="https://kianac.artstation.com" target="_blank">ArtStation</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- ---------------------------------------------------------------------
+     Contact Section : look in camera for goal (closest to vivian)
+     --------------------------------------------------------------------- -->
+     <footer class="footer">
+        <div class="footer-top">
+            <p class="footer-title">Glad we could cross paths :)</p>
+            <!-- ICONS -->
+            <div class="footer-icons">
+                <a class = "icon-link" href="https://www.linkedin.com/in/kiana-c-6773a12a7/" target="_blank"><svg fill="#91A88A" height="36px" width="36px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve" stroke="#91A88A"> <g id="SVGRepo_bgCarrier" stroke-width="0"/> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="8.192"/> <g id="SVGRepo_iconCarrier"> <path d="M-143,145v512h512V145H-143z M41.4,508.1H-8.5V348.4h49.9V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7 c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6 c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1 c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z"/> </g> </svg></a>
+                <a class = "icon-link" href="https://github.com/KianaCheatham" target="_blank"><svg width="36px" height="36px" viewBox="-7.3 -7.3 87.60 87.60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#91A88A"> <g id="SVGRepo_bgCarrier" stroke-width="0"> <rect x="-7.3" y="-7.3" width="87.60" height="87.60" rx="0" fill="#91A88A" strokewidth="0"/> </g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/> <g id="SVGRepo_iconCarrier"> <title>team-collaboration/version-control/github</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="team-collaboration/version-control/github" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="container" transform="translate(2.000000, 2.000000)" fill-rule="nonzero"> <rect id="mask" stroke="#91A88A" stroke-width="2" fill="#91A88A" x="-1" y="-1" width="71" height="71" rx="14"> </rect> <path d="M58.3067362,21.4281798 C55.895743,17.2972267 52.6253846,14.0267453 48.4948004,11.615998 C44.3636013,9.20512774 39.8535636,8 34.9614901,8 C30.0700314,8 25.5585181,9.20549662 21.4281798,11.615998 C17.2972267,14.0266224 14.0269912,17.2972267 11.615998,21.4281798 C9.20537366,25.5590099 8,30.0699084 8,34.9607523 C8,40.8357654 9.71405782,46.1187277 13.1430342,50.8109917 C16.5716416,55.5036246 21.0008949,58.7507436 26.4304251,60.5527176 C27.0624378,60.6700211 27.5302994,60.5875152 27.8345016,60.3072901 C28.1388268,60.0266961 28.290805,59.6752774 28.290805,59.2545094 C28.290805,59.1842994 28.2847799,58.5526556 28.2730988,57.3588401 C28.2610487,56.1650247 28.2553926,55.1235563 28.2553926,54.2349267 L27.4479164,54.3746089 C26.9330843,54.468919 26.2836113,54.5088809 25.4994975,54.4975686 C24.7157525,54.4866252 23.9021284,54.4044881 23.0597317,54.2517722 C22.2169661,54.1004088 21.4330982,53.749359 20.7075131,53.1993604 C19.982297,52.6493618 19.4674649,51.9294329 19.1631397,51.0406804 L18.8120898,50.2328353 C18.5780976,49.6950097 18.2097104,49.0975487 17.7064365,48.4426655 C17.2031625,47.7871675 16.6942324,47.3427912 16.1794003,47.108799 L15.9336039,46.9328437 C15.7698216,46.815909 15.6178435,46.6748743 15.4773006,46.511215 C15.3368806,46.3475556 15.2317501,46.1837734 15.1615401,46.0197452 C15.0912072,45.855594 15.1494901,45.7209532 15.3370036,45.6153308 C15.5245171,45.5097084 15.8633939,45.4584343 16.3551097,45.4584343 L17.0569635,45.5633189 C17.5250709,45.6571371 18.104088,45.9373622 18.7947525,46.4057156 C19.4850481,46.8737001 20.052507,47.4821045 20.4972521,48.230683 C21.0358155,49.1905062 21.6846737,49.9218703 22.4456711,50.4251443 C23.2060537,50.9284182 23.9727072,51.1796248 24.744894,51.1796248 C25.5170807,51.1796248 26.1840139,51.121096 26.7459396,51.0046532 C27.3072505,50.8875956 27.8338868,50.7116403 28.3256025,50.477771 C28.5362325,48.9090515 29.1097164,47.7039238 30.0455624,46.8615271 C28.7116959,46.721353 27.5124702,46.5102313 26.4472706,46.2295144 C25.3826858,45.9484285 24.2825656,45.4922482 23.1476478,44.8597436 C22.0121153,44.2280998 21.0701212,43.44374 20.3214198,42.5080169 C19.5725954,41.571802 18.9580429,40.3426971 18.4786232,38.821809 C17.9989575,37.300306 17.7590632,35.5451796 17.7590632,33.5559381 C17.7590632,30.7235621 18.6837199,28.3133066 20.5326645,26.3238191 C19.6665366,24.1944035 19.7483048,21.8072644 20.778215,19.1626478 C21.4569523,18.951772 22.4635002,19.1100211 23.7973667,19.6364115 C25.1314792,20.1630477 26.1082708,20.6141868 26.7287253,20.9882301 C27.3491798,21.3621504 27.8463057,21.6790175 28.2208409,21.9360032 C30.3978419,21.3277217 32.644438,21.0235195 34.9612442,21.0235195 C37.2780503,21.0235195 39.5251383,21.3277217 41.7022622,21.9360032 L43.0362517,21.0938524 C43.9484895,20.5319267 45.0257392,20.0169716 46.2654186,19.5488642 C47.5058357,19.0810026 48.4543466,18.9521409 49.1099676,19.1630167 C50.1627483,21.8077563 50.2565666,24.1947724 49.3901927,26.324188 C51.2390143,28.3136755 52.1640399,30.7245457 52.1640399,33.556307 C52.1640399,35.5455485 51.9232849,37.3062081 51.444357,38.8393922 C50.9648143,40.3728223 50.3449746,41.6006975 49.5845919,42.5256002 C48.8233486,43.4503799 47.8753296,44.2285916 46.7404118,44.8601125 C45.6052481,45.4921252 44.504759,45.9483056 43.4401742,46.2293914 C42.3750975,46.5104772 41.1758719,46.7217219 39.8420054,46.8621419 C41.0585683,47.9149226 41.6669728,49.5767225 41.6669728,51.846804 L41.6669728,59.2535257 C41.6669728,59.6742937 41.8132948,60.0255895 42.1061847,60.3063064 C42.3987058,60.5865315 42.8606653,60.6690374 43.492678,60.5516109 C48.922946,58.7498829 53.3521992,55.5026409 56.7806837,50.810008 C60.2087994,46.117744 61.923472,40.8347817 61.923472,34.9597686 C61.9222424,30.0695396 60.7162539,25.5590099 58.3067362,21.4281798 Z" id="Shape" fill="#F6F7F4"> </path> </g> </g> </g> </svg></a>
+                <a class = "icon-link" href="https://kianac.artstation.com" target="_blank"><svg fill="#F6F7F4" width="36px" height="36px" viewBox="-3.2 -3.2 38.40 38.40" xmlns="http://www.w3.org/2000/svg" stroke="#F6F7F4">
+
+                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                    
+                    <rect x="-3.2" y="-3.2" width="38.40" height="38.40" rx="0" fill="#91A88A" strokewidth="0"/>
+                    
+                    </g>
+                    
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <g id="SVGRepo_iconCarrier">
+                    
+                    <path d="M 13.730469 5 L 26 27 L 27.994141 22.488281 C 28.457141 21.562281 28.410094 20.463078 27.871094 19.580078 L 20.095703 6.4355469 C 19.550703 5.5445469 18.580156 5 17.535156 5 L 13.730469 5 z M 11.511719 7.1777344 L 5.6308594 18 L 17.546875 18 L 11.511719 7.1777344 z M 4 21 L 6.171875 25.341797 C 6.679875 26.357797 7.7175156 27 8.8535156 27 L 22.566406 27 L 19.220703 21 L 4 21 z"/> </g> </svg></a>
+            </div>
+        </div>
+
+        <hr class="footer-line" /> <!--dividor line -->
+
+        <div class="footer-content">
+            <!--left-->
+            <div class="footer-left">
+                <p class="footer-year">Built with HTML & CSS · © 2026</p>
+            </div>
+            <!--grouped midle and right-->
+            <div class="footer-group">
+                <!--middle-->
+                <div class="footer-column">
+                    <p class="footer-section" >PORTFOLIO</p>
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <!--right-->
+                <div class="footer-column">
+                    <p class="footer-section" >CONTACT</p>
+                    <a href="mailto:kianacheatham@gmail.com">kianacheatham@gmail.com</a>
+                    <a href="tel:19513372134">(951) 387-2134</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- needed for interactive artwork 3.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- this one is for the pop up window -->
+    <script>
+    function openModal(file) {
+        fetch(file)
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("modal-body").innerHTML = html;
+                document.getElementById("modal").style.display = "flex";
+            });
+    }
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+    </script>
+<!-- needed for interactive artwork p5-->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+<script src="sketch.js"></script> 
+<!-- <script src="unpkg.com"></script> -->
+</body>
+</html>
+

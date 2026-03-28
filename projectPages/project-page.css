@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  /* padding-left: 4%;padding-right: 4%; */
+  /* font-family: "poppins"; */
+}
+:root {
+  /* neutrals */
+  --bg-main: #F6F7F4;   /* cool light neutral */
+  --bg-card: #E7ECE7;   /* pale eucalyptus for cards */
+  --boarder-diviver: #BBC6BB;   /* soft olive-gray border */
+  /* text */
+  --primary-text: #1A2420;   /* deep forest charcoal */
+  --secondary-text: #374038;   /* muted olive-charcoal */
+  --muted-text: #738074;   /* smoky sage (caption gray) */
+  /* aaccents */
+  --primary-accent: #3F7A5D;   /* rich forest green (main accent) */
+  --secondary-accent: #91A88A;   /* muted olive-moss */
+  --soft-accent: #CBD8CE;   /* gentle sage mist */
+  /* cool support */
+  --cool-blue: #6C8F9B;   /* dusty blue eucalyptus */
+  --deep-blue: #2F4858;   /* deep slate teal for contrast */
+}
+html {
+  overflow-x: hidden;
+}
+
+
+
+/* -------------------------------------------------------
+planet project
+------------------------------------------------------- */
+.heading{
+  text-align: center; /* specificaly for projects section rn*/
+  padding-top: 24px;
+  padding-bottom: 42px;
+  font-size: 60px;
+  color:var(--primary-text);
+}
+.extraImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.extraImages img {
+    width: calc(50% - 4px);
+    height: 200px;
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------
+Possibly relevant to all
+------------------------------------------------------- */
+
+.btn{
+  color: var(--bg-card);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: var(--primary-accent);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+} 
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+.btn:hover{
+  background-color: var(--secondary-accent);
+  transform: scale(1.02);
+}
+

@@ -9,27 +9,15 @@
 
 <body>
     <!-- this is for the project pop up window -->
-    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:100; justify-content:center; align-items:center;">
+    <!-- <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:100; justify-content:center; align-items:center;">
         <div id="modal-content" style="background:#F6F7F4; padding:8%; max-width:1000px; width:90%; border-radius:3rem; overflow-y:auto; max-height:90vh;">
             <div class="modal-close-wrapper">
                 <button class="modal-close" onclick="closeModal()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
             </div>
             <div id="modal-body"></div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- animated stripe background -->
-    <!-- <svg id="stripe-bg" width="100%" height="100%" style="
-    position: fixed;
-    top: 0; left: 0;
-    z-index: -1;
-    ">
-    <line x1="10%" y1="0" x2="10%" y2="100%" stroke="#8BAE8D" stroke-width="4"/>
-    <line x1="30%" y1="0" x2="30%" y2="100%" stroke="#C9D8B6" stroke-width="4"/>
-    <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#6D8A96" stroke-width="4"/>
-    <line x1="70%" y1="0" x2="70%" y2="100%" stroke="#4F6B5A" stroke-width="4"/>
-    <line x1="90%" y1="0" x2="90%" y2="100%" stroke="#D7E3E5" stroke-width="4"/>
-    </svg> -->
 
     <!-- ---------------------------------------------------------------------
     Header+Main : change to artwork later
@@ -63,115 +51,131 @@
         }
     </script>
 
-    <!-- bg art part THESE WORDS ARE WHAT GOES OVER: "Exploring motion, interaction, and visual systems through design.
-Scroll to see my work." -->
-    <section class="bg-art"> 
-        <div class="home-text">
-            <p>Exploring motion, interaction, and visual systems through design.</p>
-            <br>
-            <p>Scroll to see my work.</p>
-        </div>
-        <a href="#about" class="scroll-indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#4F6B5A">
-                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-        </a>
-    </section>
-
-    <!-- <p class="color1"> words</p>
-    <p class="color2"> words</p>
-    <p class="color3"> words</p>
-    <p class="color4"> words</p>
-    <p class="color5"> words</p>
-    <p class="color6"> words</p>
-    <p class="color7"> words</p>
-    <p class="color8"> words</p>
-    <p class="color9"> words</p>
-    <p class="color10"> words</p>
-    <p class="color11"> words</p> -->
-
-    <!-- ---------------------------------------------------------------------
-     About / Second Section : honestly prob delete the about me part but about is important
-     --------------------------------------------------------------------- -->
-     <div id="about">
-        <!--div class="container"-->
-            <!-- <h3 class="about-welcome">Hi, I'm Kiana!</h3> -->
-            <div class="about-info"> 
-                <span class="about-info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#738074"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 220 200-108v-151L480-372 280-491v151l200 108Zm0-220Zm0 69Zm0 0Z"/></svg>
-                    <p>Design | Media Art, Linguistics & Computer Science / UCLA</p>
-                </span>
-                <span class="about-divider">·</span>
-                <span class="about-info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#738074"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-560q0-117-73.5-198.5T480-840q-93 0-166.5 81.5T240-560q0 71 59 162.5T480-186Z"/></svg>
-                    <p>SD / LA</p>
-                </span>
-            </div>
-            <p class="aboutPG">Hi, I'm Kiana! I create immersive experiences that blend visual storytelling with 
-                technology. My work explores the intersection of science, design, 
-                and human interaction, with a focus on building engaging and 
-                meaningful products / experiences.</p>
-     </div>
-
      <!-- ---------------------------------------------------------------------
-     Project / Third Section 
+     gallery
      --------------------------------------------------------------------- -->
-     <section class="projects" id="projects">
-        <h3 class="heading">Projects</h3>
-        <div class="projects-box"> 
-
-            <!--PROJECT 1-->
-            <div class="project-card">
-                <img src="images/covers/pocketUniverse.webp" alt="">
-                <h3>AR Planet Project</h3>
-                <p>Immersive AR exploration of the solar system</p>
-                <ul class="software"> <li>Xcode</li>  <li>Swift</li> <li>Blender</li>  <li>Figma</li> <li>Reality Converter</li>  <li>Procreate</li></ul>
-                <div class="btn" onclick="openModal('projectPages/planetProject.html')">View Project</div>
+     <section class="gallery" id="projects">
+        <h3 class="heading">Gallery</h3>
+        <div class="gallery-box"> 
+            
+            <!--ucla1-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/ucla1.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Adobe Illustrator · Adobe Photoshop</p>
+            </div>
+              
+            <!--ucla2-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/ucla2.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Adobe Illustrator · Adobe Photoshop</p>
             </div>
 
-            <!--PROJECT 2-->
-            <div class="project-card">
-                <img src="images/covers/peak.jpg" alt="">
-                <h3>P.E.A.K.</h3>
-                <p>ios app for 2025 Congressional App Challange</p>
-                <ul class="software"> <li>Xcode</li>  <li>Figma</li>  <li>Swift</li></ul>
-                <div class="btn" onclick="openModal('projectPages/PEAK.html')">View Project</div>
+            <!--Giraffe-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/gifaffe.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
             </div>
 
-            <!--PROJECT 3-->
-            <div class="project-card">
-                <img src="images/covers/seagulls.jpg" alt="">
-                <h3>Flock</h3>
-                <p> Interactive bird simulation through mouse tracking and illustration</p>
-                <ul class="software"> <li>Processing</li>  <li>Procreate</li></ul>
-                <div class="btn" onclick="openModal('projectPages/seagulls.html')">View Project</div>
+            <!--sdsu1-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/sdsu1.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Adobe Illustrator · Adobe Photoshop</p>
             </div>
 
-            <!--PROJECT 4-->
-            <div class="project-card">
-                <img src="images/covers/mountian.png" alt="">
-                <h3>Mountain Lighting</h3>
-                <p>Sky simulation mapping user input to atmospheric lighting states</p>
-                <ul class="software"> <li>P5js</li>  <li>Procreate</li></ul>
-                <div class="btn" onclick="openModal('projectPages/mountian.html')">View Project</div>
+             <!--sdsu2-->
+             <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/sdsu2.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Adobe Illustrator · Adobe Photoshop</p>
+             </div>
+             
+            <!--fish1-->
+            <!-- <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/fish1.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
+            </div> -->
+            
+            <!--fish2-->
+            <!-- <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/fish2.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">procreate</p>
+            </div> -->
+
+             <!--grilling-->
+             <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/freedomFlames.png" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Adobe Illustrator · Adobe Photoshop</p>
+             </div>
+
+            <!--ben-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/ben.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
             </div>
 
-            <!--PROJECT 5-->
-            <div class="project-card">
-                <img src="images/covers/diner.jpg" alt="">
-                <h3>Diner</h3>
-                <p>Node shading study exploring texture, light, and atmospheric depth in Blender</p>
-                <ul class="software"> <li>Blender</li></ul>
-                <div class="btn" onclick="openModal('projectPages/diner.html')">View Project</div>
+            <!--nasa-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/nasa.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
             </div>
 
-            <!--PROJECT 6-->
-            <div class="project-card">
-                <img src="images/covers/CAD.png" alt="">
-                <h3>Baja SAE Hub</h3>
-                <p>CAD design for off-road vehicle hub</p>
-                <ul class="software"> <li>Solidworks</li></ul>
-                <div class="btn" onclick="openModal('projectPages/CAD.html')">View Project</div>
+            <!--map-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/map.png" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
+            </div>
+
+            <!--enter-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/enter.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Blender</p>
+            </div>
+
+            <!--hand-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/hand.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
+            </div>
+
+            <!--siena-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/siena.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>    
+            </div>
+
+            <!--lol-->
+            <div class="gallery-item">
+                <div class="gallery-card">
+                    <img src="images/gallery/lol.jpg" alt="Pocket Universe">
+                </div>
+                <p class="software-label">Procreate</p>
             </div>
 
             <!--PROJECT MORE WORK-->
@@ -238,26 +242,6 @@ Scroll to see my work." -->
             </div>
         </div>
     </footer>
-    <!-- needed for interactive artwork 3.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- this one is for the pop up window -->
-    <script>
-    function openModal(file) {
-        fetch(file)
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("modal-body").innerHTML = html;
-                document.getElementById("modal").style.display = "flex";
-            });
-    }
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
-    }
-    </script>
-<!-- needed for interactive artwork p5-->
-<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
-<script src="sketch.js"></script> 
-<!-- <script src="unpkg.com"></script> -->
 </body>
 </html>
 

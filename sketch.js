@@ -210,6 +210,7 @@
 //     }
 // }
 
+
 let blobs = [];
 let numBlobs = 6;
 
@@ -218,7 +219,7 @@ function setup() {
     canvas.position(0, 0);
     canvas.style('z-index', '-1');
     canvas.style('position', 'fixed');
-    canvas.style('filter', 'blur(40px)'); 
+    canvas.style('filter', 'blur(30px)'); 
     noStroke();
     
     for (let i = 0; i < numBlobs; i++) {

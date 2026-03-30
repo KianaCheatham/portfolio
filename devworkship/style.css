@@ -46,10 +46,6 @@ Index css code
 bg art part + color scheme
 ------------------------------------------------------- */
 .bg-art {
-  display: flex;                /* enables flex layout */
-  flex-direction: column;       /* stack children vertically */
-  justify-content: center;  
-  align-items: center;  
   width: 100%;
   height: 100vh;
   position: relative;
@@ -70,23 +66,6 @@ bg art part + color scheme
   filter: blur(0px);
   animation: meshMove 12s ease-in-out infinite alternate;
 } */
-.bg-art p{
-  z-index: 1;
-  padding-bottom: 12px;
-  color:#3F7A5D;
-  line-height: 0.8rem;        /* space between lines — 1.5 to 2 is usually nice */
-  letter-spacing: 0.05em;  /* space between letters */
-  word-spacing: 2px;       /* space between words */
-  font-size: 1.6rem;         /* text size */
-  color: var(--secondary-text);/* color */
-  font-weight: 400;        /* thickness — 400 normal, 700 bold */
-  text-align: center;
-  margin: 0;
-}
-.home-text {
-  padding: 10%;
-  padding-top: 5vw;
-}
 .bg-art::after {
   content: '';
   position: absolute;
@@ -96,7 +75,7 @@ bg art part + color scheme
   height: 100%;
   z-index: 0;
   pointer-events: none; /* so it doesn't block mouse interaction */
-  opacity: 0.25; /* subtle — adjust to taste */
+  opacity: 0.25; /* subtle â€” adjust to taste */
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 200px 200px;
@@ -118,6 +97,26 @@ bg art part + color scheme
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
+/* canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+} THIS WAS FOR P5JS ONE */
+
+/* body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} */
 
 .color1{
   background-color: var(--bg-main);
@@ -207,16 +206,11 @@ nav li:first-child{
   align-items: flex-start;
   justify-content: flex-start;
 }
-.sidebar ul{
-  background-color:red;
-}
 .sidebar li{
   width: 100%;
-  color:red;
 }
 .sidebar a{
   width: 100%;
-  color:red;
   opacity: 100;
   z-index: 11;
 }
@@ -258,7 +252,7 @@ body {
   word-spacing: 2px;       /* space between words */
   font-size: 2rem;         /* text size */
   color: var(--secondary-text);/* color */
-  font-weight: 700;        /* thickness — 400 normal, 700 bold */
+  font-weight: 700;        /* thickness â€” 400 normal, 700 bold */
   text-align: center;
 }
 .about-info {
@@ -278,14 +272,6 @@ body {
   color: var(--muted-text);
   font-weight: 400;
 }
-.about-info-item p{
-  color: var(--primary-accent);
-  letter-spacing: 0.05em;  /* space between letters */
-  word-spacing: 2px;       /* space between words */
-  font-size: 1rem;         /* text size */
-  font-weight: 700;        /* thickness — 400 normal, 700 bold */
-  text-align: center;
-}
 .about-divider {
   color: var(--muted-text);
   font-size: 1.2rem;
@@ -295,18 +281,19 @@ body {
   word-spacing: 2px;       /* space between words */
   font-size: 1rem;         /* text size */
   color: var(--secondary-text);/* color */
-  font-weight: 400;        /* thickness — 400 normal, 700 bold */
+  font-weight: 400;        /* thickness â€” 400 normal, 700 bold */
   text-align: center;
 }
 .aboutPG{
   padding: 0 10%;
   padding-bottom: 10%;
-  line-height: 1.8;        /* space between lines — 1.5 to 2 is usually nice */
+  line-height: 1.8;
+  line-height: 1.8;        /* space between lines â€” 1.5 to 2 is usually nice */
   letter-spacing: 0.05em;  /* space between letters */
   word-spacing: 2px;       /* space between words */
-  font-size: 1.6rem;         /* text size */
+  font-size: 1rem;         /* text size */
   color: var(--secondary-text);/* color */
-  font-weight: 400;        /* thickness — 400 normal, 700 bold */
+  font-weight: 400;        /* thickness â€” 400 normal, 700 bold */
   text-align: center;
 }
 
@@ -529,7 +516,7 @@ Possibly relevant to all
 ------------------------------------------------------- */
 .heading{
   text-align: center; /* specificaly for projects section rn*/
-  padding-top: 8rem;
+  padding-top: 24px;
   padding-bottom: 42px;
   font-size: 60px;
   color:var(--primary-text);
@@ -764,12 +751,12 @@ posibly all projects
 ------------------------------------------------------- */
 .project-p{
   line-height: 1.8;
-  line-height: 1.8;        /* space between lines — 1.5 to 2 is usually nice */
+  line-height: 1.8;        /* space between lines â€” 1.5 to 2 is usually nice */
   letter-spacing: 0.05em;  /* space between letters */
   word-spacing: 2px;       /* space between words */
   font-size: 1rem;         /* text size */
   color: var(--secondary-text);/* color */
-  font-weight: 400;        /* thickness — 400 normal, 700 bold */
+  font-weight: 400;        /* thickness â€” 400 normal, 700 bold */
 }
 
 #modal {
@@ -841,115 +828,3 @@ posibly all projects
 
 
 
-
-
-
-
-/* -------------------------------------------------------
-Gallery
-------------------------------------------------------- */
-.gallery{
-  background-color: var(--bg-main);
-  padding-right: 10%;
-  padding-left: 10%;
-  overflow: visible;
-}
-.gallery-item {
-  break-inside: avoid;     /* keeps card + label together as one unit */
-  margin-bottom: 1.5rem;
-}
-.gallery-box {
-  column-count: 3;
-  column-gap: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-.gallery-card {
-  display: block;
-  width: 100%;
-  break-inside: avoid;
-  background-color: var(--bg-card);
-  border: 2px solid var(--boarder-diviver);
-  border-radius: 2rem;
-  padding: 0;
-  cursor: pointer;
-  box-shadow: 0 0 5px var(--boarder-diviver);
-  transition: 0.3s ease;
-  overflow: hidden;
-}
-.gallery-card:hover {
-  box-shadow: 0 0 5px var(--boarder-diviver),
-              0 0 15px var(--boarder-diviver);
-  transform: scale(1.02);
-}
-.gallery-card img {
-  width: 100%;
-  display: block;
-  border-radius: 0;
-  object-fit: cover;
-}
-.software-label {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--boarder-diviver);
-  text-align: left;
-  padding: 0.2rem 0.5rem 1.4rem;   /* top / sides / bottom before next card */
-  break-inside: avoid;            /* keeps label with its card in masonry */
-}
-
-
-/* .gallery-card h3 {
-  font-size: 3rem;
-  color: var(--secondary-text);
-  padding-top: 1rem;
-}
-
-.gallery-card p {
-  font-size: 1.6rem;
-  color: var(--secondary-text);
-  /* padding-bottom: 1rem; */
-/* }
-
-.gallery-card ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
-  overflow: visible;
-  white-space: normal;
-}
-.gallery-card li {
-  color: var(--muted-text);
-  padding: 10px;
-  border: var(--boarder-diviver);
-  border-radius: 4rem;
-  border: 2px solid var(--boarder-diviver);
-  /* display: inline-block; */
-  /* white-space: nowrap;
-}   */
-
-/*tint*/
-/* .project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(108, 143, 155, 0.20);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  border-radius: inherit;
-}
-.project-card:hover::after {
-  opacity: 1;
-} */
-
-@media(max-width: 1000px){
-  .gallery-box{ column-count: 2; }
-}
-
-@media(max-width: 600px){
-  .gallery-box{ column-count: 1; }
-}

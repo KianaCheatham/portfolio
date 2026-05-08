@@ -74,7 +74,7 @@ bg art part + color scheme
   z-index: 1;
   padding-bottom: 12px;
   color:#3F7A5D;
-  line-height: 0.8rem;        /* space between lines — 1.5 to 2 is usually nice */
+  line-height: 1.6;        /* space between lines — 1.5 to 2 is usually nice */
   letter-spacing: 0.05em;  /* space between letters */
   word-spacing: 2px;       /* space between words */
   font-size: 1.6rem;         /* text size */
@@ -82,10 +82,12 @@ bg art part + color scheme
   font-weight: 400;        /* thickness — 400 normal, 700 bold */
   text-align: center;
   margin: 0;
+  font-size: clamp(1rem, 2vw, 1.6rem);  /* was fixed 1.6rem */
 }
 .home-text {
-  padding: 10%;
-  padding-top: 5vw;
+  padding: 5vw 10%;
+  /* padding-top: 5vw; */
+  text-align: center;
 }
 .bg-art::after {
   content: '';

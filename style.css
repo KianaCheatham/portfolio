@@ -769,6 +769,14 @@ Projects css code
     gap: 1rem;
 }
 
+/* ------- pixel project -------- 
+--------------------------------*/  
+.video-container-pixel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
 /* -------------------------------------------------------
 posibly all projects
 ------------------------------------------------------- */

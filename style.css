@@ -218,15 +218,15 @@ nav li:first-child{
   justify-content: flex-start;
 }
 .sidebar ul{
-  background-color:red;
+  background-color: var(--primary-text);
 }
 .sidebar li{
   width: 100%;
-  color:red;
+  color: var(--primary-text);
 }
 .sidebar a{
   width: 100%;
-  color:red;
+  color: var(--primary-text);
   opacity: 100;
   z-index: 11;
 }
@@ -264,20 +264,23 @@ body {
 }
 .about-welcome{
   padding-top: 10%;
-  letter-spacing: 0.05em;  /* space between letters */
-  word-spacing: 2px;       /* space between words */
-  font-size: 2rem;         /* text size */
-  color: var(--secondary-text);/* color */
-  font-weight: 700;        /* thickness — 400 normal, 700 bold */
+  letter-spacing: 0.05em; 
+  word-spacing: 2px;      
+  font-size: 2rem;        
+  color: var(--secondary-text);
+  font-weight: 700;        /* 400 normal, 700 bold */
   text-align: center;
 }
 .about-info {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 12px;
   justify-content: center;
   padding: 1rem;
   padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .about-info-item {
   display: flex;
@@ -357,7 +360,7 @@ projects page : masonry
 .projects-box {
   column-count: 3;
   column-gap: 2rem;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   padding-bottom: 2rem;
 }
 
@@ -371,16 +374,53 @@ projects page : masonry
   border: 2px solid var(--boarder-diviver);
   border-radius: 3rem;
   padding: 3rem 2rem;         /* top/bottom sides */
-  cursor: pointer;
+  /* cursor: pointer; */
   box-shadow: 0 0 5px var(--boarder-diviver);
   transition: 0.3s ease;
 }
 
-.project-card:hover {
+.featured-projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.featured-hero {
+  grid-column: 1 / -1;
+}
+.h-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /*in just a seond chnage this for mobile view */
+  align-items: center;
+}
+.h-stack img{
+  flex: 1 1 0;
+  min-width: 100px;
+  height: auto;
+}
+
+.project-card.featured-hero .h-stack img {
+  border-radius: 0.7rem;
+}
+
+.featured-projects .project-card { 
+  margin-bottom: 0; 
+}
+
+@media (max-width: 700px) {  /* stack on mobile */
+  .featured-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .project-card:hover {
   box-shadow: 0 0 5px var(--boarder-diviver),
               0 0 15px var(--boarder-diviver);
   transform: scale(1.02);
-}
+} */
 
 .project-card img {
   width: 100%;
@@ -578,20 +618,9 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* -------------------------------------------------------
 Projects css code
 ------------------------------------------------------- */
-
 
 /* ------- planet project -------- 
 --------------------------------*/
@@ -619,11 +648,11 @@ Projects css code
 }
 
 .project-info {
-    display: flex;
-    gap: 40px;
-    padding: 5rem 0;
-    padding-bottom: 6rem;
-    justify-content: space-between;
+  display: flex;
+  gap: 40px;
+  padding: 5rem 0;
+  padding-bottom: 6rem;
+  justify-content: space-between;
 }
 .project-info-left {
     
@@ -653,13 +682,54 @@ Projects css code
   white-space: nowrap;
 }
 
-.extraImages {
+.extraImagesPlanets {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 0.7rem;
+  width: 100%;
+  padding-bottom: 6rem;
+  /* cursor: pointer; */
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+.extraImagesPlanets img {
+  width: 55%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.SSImages {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 0.7rem;
   padding: 4rem, 0;
+  padding-bottom: 1rem;
 }
-.extraImages img {
+.SSImages img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.process {
+  padding: 4rem;
+  /* background-color: var(--soft-accent); */
+  /* border: 2px solid var(--boarder-diviver); */
+  border-radius: 3rem;
+}
+.process-heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  color: var(--secondary-text);
+}
+
+.processImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.processImages img {
   width: 100%;
   object-fit: cover;
   border-radius: 2rem;
@@ -777,6 +847,18 @@ Projects css code
   max-width: 600px;
 }
 
+.processImagesPixel {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  padding: 4rem, 0;
+}
+.processImagesPixel img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
 /* -------------------------------------------------------
 posibly all projects
 ------------------------------------------------------- */
@@ -808,7 +890,10 @@ posibly all projects
   background-repeat: repeat;
 }
 #modal-content {
-  position: relative;  /* add this to your existing modal-content styles */
+  position: relative;  
+  width: 90%;              /* how much of the screen it takes up */
+  max-width: 2200px;       
+  margin: 0 auto;           /* centered */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE */
 }
@@ -915,6 +1000,22 @@ Gallery
   break-inside: avoid;            /* keeps label with its card in masonry */
 }
 
+/* gallery pop up */
+#modal-content.image-modal {
+  padding: 2%;
+  width: fit-content;
+  max-width: none;
+  overflow: hidden;
+}
+#modal-content.image-modal #modal-body {
+  display: flex;
+}
+#modal-content.image-modal .modal-close {
+  position: absolute;
+  top: 0.25rem;
+  right: auto;
+  left: 0.25rem;
+}
 
 /* .gallery-card h3 {
   font-size: 3rem;
